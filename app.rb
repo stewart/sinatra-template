@@ -12,6 +12,7 @@ class App < Sinatra::Base
 
   assets do
     serve "/javascripts", from: "app/assets/javascripts"
+    serve "/components",  from: "app/assets/components"
     serve "/stylesheets", from: "app/assets/stylesheets"
     serve "/images",      from: "app/assets/images"
 
