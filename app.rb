@@ -5,7 +5,10 @@ class App < Sinatra::Base
     set :root, __dir__
 
     # Since Sinatra::AssetPack won't change the load path
-    set :sass, { load_paths: [ "#{root}/app/assets/stylesheets" ] }
+    set :scss, { load_paths: [ "#{root}/app/assets/stylesheets" ] }
+    puts "#{root}/app/assets/stylesheets" 
+
+    set :sass, scss
 
     register Sinatra::AssetPack
   end
